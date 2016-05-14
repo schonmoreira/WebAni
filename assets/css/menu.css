@@ -1,0 +1,202 @@
+/**
+ * Menu Styling
+ * Provides life to the menu
+ * By Arthur Annibal - WebAniversario
+ * Version 0.0.0
+ */
+ 
+ul.menu {
+	padding:0;
+	padding-bottom:15px;
+}
+.menu-item {
+	position: relative;
+	width: 80%;
+	margin-left:10%;
+	margin-top:15px;
+	list-style:none;
+	z-index:15;
+}
+.menu-item:before {
+	content: "";
+	display: block;
+	padding-top: 100%;
+}
+.menu-link {
+	position:  absolute;
+	top: 0; left: 0; bottom: 0; right: 0;
+	background:rgba(255,255,255,0.9);
+	border-radius:5px;
+	text-align:center;
+	color:goldenrod;
+}
+.menu-link .fa {
+	font-size:3.5em;
+	line-height:1.6em;
+}
+.menu-link:hover {
+	background:#444;
+	color:white;
+}
+.menu-link:active {
+	
+}
+
+
+ul.menu ul.submenu {
+	padding:0;
+	padding-left:25px;
+	position:absolute;
+	z-index:15;
+	left:100%;
+	top:0px;
+	margin-left:-5px;
+	
+	display:none;
+}
+.menu-item:hover > .submenu,
+.submenu:hover,
+.menu-item:focus > .submenu,
+.submenu:focus,
+.menu-link:focus + .submenu {
+	/* todo: focus submenu-link display submenu */
+	display:block !important;
+}
+
+.submenu-item:hover > .submenu,
+.submenu:hover,
+.submenu-item:focus > .submenu,
+.submenu:focus,
+.submenu-link:focus + .submenu {
+	/* todo: focus submenu-link display submenu */
+	display:block !important;
+}
+.submenu-item:first-child:before{
+	position:absolute;
+	left:-30px;
+	top:8px;
+	display:block;
+	border:15px solid transparent;
+	border-right-color:white;
+	content:"";
+}
+.submenu-item {
+	list-style:none;
+	z-index:15;
+	position:relative;
+	white-space:nowrap;
+}
+.submenu-link {
+	padding:10px 25px;
+	background:#FFF;
+	color:#444;
+	display:block;
+}
+.submenu-item:hover>.submenu-link{
+	background:#444;
+	color:goldenrod;
+	text-decoration:none;
+}
+.submenu-item:first-child:hover::before {
+	border-right-color:#444;
+}
+.submenu-item:active>.submenu-link {
+	color:white;
+}
+.submenu-link {
+	text-decoration:none;
+}
+
+
+.menu-item-inactive {
+	
+}
+.submenu-item-inactive {
+	
+}
+.menu-item-current {
+	
+}
+.submenu-item-current {
+	
+}
+
+.submenu {
+	box-shadow:5px 0px 4px rgba(0,0,0,0.3);
+}
+.submenu-container, 
+.submenu-container .submenu-container .submenu {
+    z-index: 16;
+}
+.submenu-container .submenu-container,
+.submenu-container .submenu-container .submenu-container .submenu {
+    z-index: 17;
+}
+.submenu-container .submenu-container .submenu-container,
+.submenu-container .submenu-container .submenu-container .submenu-container .submenu {
+    z-index: 18;
+}
+.submenu-container .submenu-container .submenu-container .submenu-container,
+.submenu-container .submenu-container .submenu-container .submenu-container .submenu-container .submenu {
+    z-index: 19;
+}
+.submenu-container .submenu-container .submenu-container .submenu-container .submenu-container,
+.submenu-container .submenu-container .submenu-container .submenu-container .submenu-container .submenu-container .submenu {
+    z-index: 20;
+}
+
+.submenu-container:hover + .submenu-container { z-index:9; }
+
+
+
+@media (max-width:768px) {
+	.menu-link .fa {
+		font-size: 5em;
+		line-height: 1.6em;
+	}
+	ul.submenu ul.submenu {
+		position:relative;
+		left:0px;
+		display:block;
+		box-shadow:none;
+	}
+	ul.submenu .submenu-item:first-child > .submenu-link {
+		box-shadow:inset 0px 1px 2px rgba(0,0,0,0.3);
+	}
+}
+@media (max-width:640px) {
+	.menu-link .fa {
+		font-size: 4.8em;
+		line-height: 1.3em;
+	}
+}
+@media (max-width:450px) {
+	.menu-link .fa {
+		font-size: 3.9em;
+		line-height: 1.5em;
+	}
+}
+@media (max-width:370px) {
+	.menu-link .fa {
+		font-size: 3.6em;
+		line-height: 1.4em;
+	}
+}
+@media (max-width:280px) {
+	.menu-link .fa {
+		font-size: 3em;
+		line-height: 1.4em;
+	}
+}
+@media (max-width:240px) {
+	.menu-link .fa {
+		font-size: 2.4em;
+		line-height: 1.4em;
+	}
+}
+@media (max-width:180px) {
+	.menu-link .fa {
+		font-size: 2em;
+		line-height: 1.2em;
+	}
+}

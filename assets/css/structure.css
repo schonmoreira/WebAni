@@ -1,0 +1,189 @@
+/**
+ * Structure Styling
+ * Controls the basics of the entire frontend
+ * By Arthur Annibal - WebAniversario
+ * Version 0.0.0
+ *
+ * Diminuir essa porra
+ *
+ *
+ */
+ 
+body, html {
+	margin:0;
+	padding:0;
+	background:#F2F2F2;
+	z-index:0;
+	position:relative;
+}
+menu,main,header,content, #message-container, #page-options, #content-inner, #modal-container, #background-container, #background-inner {
+	display:block;
+	position:relative;
+	box-sizing:border-box;
+}
+
+header, content, menu {
+	background:rgba(240,240,240,0.85);
+}
+
+menu,main {
+	min-height:250px;
+}
+menu {
+	z-index:11;
+	padding:0;
+	margin:0;
+	float:left;
+}
+main {
+	z-index:10;
+	float:left;
+	display:block;
+	position:relative;
+	padding:15px;
+}
+
+
+
+#message-container {
+	/* todo: add degrade and set width 100% with some variable padding */
+	position:fixed;
+	width:90%;
+	padding:5px;
+	z-index:21;
+	top:0;
+}
+header, content {
+	border-radius:5px;
+}
+header {
+	margin-bottom:15px;
+	padding:15px;
+}
+header h1 {
+	margin:0px;
+	float:left;
+}
+header:after,
+#page-options:after {
+	content:"";
+	display:block;
+	clear:both;
+	float:none;
+}
+#page-options a {
+	white-space:nowrap;
+}
+content {
+	padding:15px;
+}
+content #page-options {
+	padding:5px 15px;
+	padding-top:0px;
+}
+content #content-inner {
+	min-height:300px;
+}
+#modal-container {
+	z-index:25;
+	background:rgba(0,0,0,0.2);
+	position:fixed;
+	top:0px; right:0px; bottom:0px; left:0px;
+	width:100%;
+	height:100%;
+}
+#background-container {
+	z-index:5;
+	position:fixed;
+	top:0px; right:0px; bottom:0px; left:0px;
+	width:100%;
+	height:100%;
+	background:rgba(200,200,200,0.2);
+}
+#background-container #background-inner {
+	z-index:5;
+	display:block;
+	top:0px; right:0px; bottom:0px; left:0px;
+	height:100%;
+	width:100%;
+	
+	background-position:center center;
+	background-repeat:no-repeat;
+	background-size:cover;
+}
+
+
+
+
+
+
+
+
+/* Extra large */
+@media (min-width:1200px) {
+	main, content, header {padding:30px;}
+	header {margin-bottom:30px;}
+	menu {width:10%; }
+	main {width:90%; padding-top:15px;}
+	#message-container { width:85%; }
+}
+
+/* Large */
+@media (max-width:1200px) {
+	menu {width:15%; }
+	main {width:85%; }
+	#message-container { width:79.5%; }
+}
+
+/* Medium */
+@media (max-width:992px) {
+	menu {width:17%; }
+	main {width:83%; }
+}
+
+/* Small */
+@media (max-width:768px) {
+	menu {width:22%; }
+	main {width:78%; }
+	#message-container { width:76%; }
+	
+	main, content, header {padding:8px;}
+	header {margin-bottom:8px;}
+	
+	header h1 {
+		margin-bottom:10px;
+	}
+	#page-options-left {
+		margin-bottom:15px;
+	}
+}
+
+/* Extra Small */
+@media (max-width:544px) {
+	main, content, header {padding:4px;}
+	#message-container { width:74%; }
+	header {margin-bottom:4px;}
+	menu {width:25%; }
+	main {width:75%; }
+}
+
+body.no-menu main {
+	width:100%;
+	float:none;
+}
+body.no-menu menu {
+	display:none;
+}
+
+/* uncomment this section to display filled stuff 
+body {background:black;}
+menu {background:red;}
+main {background:#444;}
+main #message-container {background:green; min-height:5px;}
+main header {background:lightgray; min-height:50px;}
+main content {background:gray; min-height:500px;}
+main content #page-options {background:red; min-height:25px;}
+main content #content-inner {background:white; min-height:300px;}
+main #modal-container {background:rgba(0,0,0,0.2);}
+main #background-container {background:rgba(255,0,0,0.2);}
+/* */

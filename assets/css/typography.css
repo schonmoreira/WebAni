@@ -1,0 +1,106 @@
+/**
+ * Typography Styling
+ * Styles texts and utility classes
+ * By Arthur Annibal - WebAniversario
+ * Version 0.0.0
+ */
+
+body {
+	font-family:'Montserrat Alternates', sans-serif;
+	font-size:16pt;
+}
+
+/* Extra large */
+@media (min-width:1200px) {
+	body {}
+}
+
+/* Large */
+@media (max-width:1200px) {
+	body {}
+}
+
+/* Medium */
+@media (max-width:992px) {
+	body {font-size:14pt;}
+}
+
+/* Small */
+@media (max-width:768px) {
+	body {font-size:12pt;}
+}
+
+/* Extra Small */
+@media (max-width:544px) {
+	body {font-size:10pt;}
+}
+
+
+h1, .title {
+	font-size: 2em;
+	font-family:'Montserrat Alternates', sans-serif;
+}
+h2, .content-title {
+	font-size: 1.9em;
+	font-family:'Pacifico', cursive;
+}
+h3, .content-subtitle {
+	font-size: 1.6em;
+	font-family:'Lora', serif;
+}
+h4, .small-title {
+	font-size: 1em;
+	font-family:'Montserrat Alternates', sans-serif;
+}
+h5, .small-content-title {
+	font-size: 0.95em;
+	font-family:'Pacifico', cursive;
+}
+h6, .small-content-subtitle {
+	font-size: .8em;
+	font-family:'Lora', serif;
+}
+p {font-size:1em;}
+p.small {font-size:.5em;}
+
+a {cursor:pointer;}
+
+
+.coloquial {
+	font-family:'Pacifico', cursive;
+}
+.official {
+	font-family:'Lora', serif;
+}
+.spelled {
+	letter-spacing:1em;
+}
+.yelling {
+	text-transform:Uppercase;
+	font-family:'Lora', serif;
+	font-weight:bold;
+}
+.carved {
+	color:rgba(205,205,205,0.8);
+	text-shadow:0px -1px 0px black, 0px 1px 0px white;
+}
+.outlined {
+	text-shadow:0px 0px 1px black, 0px 1px 0px black, 0px -1px 0px black, 1px 0px 0px black, -1px 0px 0px black;
+	color:#F2F2F2;
+}
+.heavy-outlined {
+	text-shadow:0px 0px 1px black, 0px 1px 0px black, 0px -1px 0px black, 1px 0px 0px black, -1px 0px 0px black,
+	2px 0px 0px black, 1px 1px 0px black, 0px 2px 0px black, 1px -1px 0px black, 0px -2px 0px black, -1px -1px 0px black, -2px 0px 0px black, -1px 1px 0px black;
+	color:#F2F2F2;
+}
+.long-shadow-container {
+	overflow:hidden;
+}
+.long-shadow {
+	text-shadow:0px 0px 0px #AAA, 1px 1px 0px #AAA, 2px 2px 0px #AAA, 3px 3px 0px #AAA, 4px 4px 0px #AAA, 5px 5px 0px #AAA, 6px 6px 0px #AAA, 7px 7px 0px #AAA, 8px 8px 0px #AAA, 9px 9px 0px #AAA, 10px 10px 0px #AAA, 11px 11px 0px #AAA, 12px 12px 0px #AAA, 13px 13px 0px #AAA, 14px 14px 0px #AAA, 15px 15px 0px #AAA, 16px 16px 0px #AAA, 17px 17px 0px #AAA, 18px 18px 0px #AAA, 19px 19px 0px #AAA, 20px 20px 0px #AAA, 21px 21px 0px #AAA, 22px 22px 0px #AAA, 23px 23px 0px #AAA, 24px 24px 0px #AAA, 25px 25px 0px #AAA, 26px 26px 0px #AAA, 27px 27px 0px #AAA, 28px 28px 0px #AAA, 29px 29px 0px #AAA, 30px 30px 0px #AAA, 31px 31px 0px #AAA, 32px 32px 0px #AAA, 33px 33px 0px #AAA, 34px 34px 0px #AAA, 35px 35px 0px #AAA, 36px 36px 0px #AAA, 37px 37px 0px #AAA, 38px 38px 0px #AAA, 39px 39px 0px #AAA, 40px 40px 0px #AAA, 41px 41px 0px #AAA, 42px 42px 0px #AAA, 43px 43px 0px #AAA, 44px 44px 0px #AAA, 45px 45px 0px #AAA, 46px 46px 0px #AAA, 47px 47px 0px #AAA, 48px 48px 0px #AAA, 49px 49px 0px #AAA, 50px 50px 0px #AAA, 51px 51px 0px #AAA, 52px 52px 0px #AAA, 53px 53px 0px #AAA, 54px 54px 0px #AAA, 55px 55px 0px #AAA, 56px 56px 0px #AAA, 57px 57px 0px #AAA, 58px 58px 0px #AAA, 59px 59px 0px #AAA, 60px 60px 0px #AAA, 61px 61px 0px #AAA, 62px 62px 0px #AAA, 63px 63px 0px #AAA, 64px 64px 0px #AAA, 65px 65px 0px #AAA, 66px 66px 0px #AAA, 67px 67px 0px #AAA, 68px 68px 0px #AAA, 69px 69px 0px #AAA, 70px 70px 0px #AAA, 71px 71px 0px #AAA, 72px 72px 0px #AAA, 73px 73px 0px #AAA, 74px 74px 0px #AAA, 75px 75px 0px #AAA, 76px 76px 0px #AAA, 77px 77px 0px #AAA, 78px 78px 0px #AAA, 79px 79px 0px #AAA, 80px 80px 0px #AAA, 81px 81px 0px #AAA, 82px 82px 0px #AAA, 83px 83px 0px #AAA, 84px 84px 0px #AAA, 85px 85px 0px #AAA, 86px 86px 0px #AAA, 87px 87px 0px #AAA, 88px 88px 0px #AAA, 89px 89px 0px #AAA, 90px 90px 0px #AAA, 91px 91px 0px #AAA, 92px 92px 0px #AAA, 93px 93px 0px #AAA, 94px 94px 0px #AAA, 95px 95px 0px #AAA, 96px 96px 0px #AAA, 97px 97px 0px #AAA, 98px 98px 0px #AAA, 99px 99px 0px #AAA;
+}
+
+
+.hidden {
+	display:none !important;
+}

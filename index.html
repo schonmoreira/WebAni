@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="icon" type="image/png" href="images/favicon.png" />
+		<title>WebAniversario</title>
+		
+		<!-- lib -->
+		<link rel="stylesheet" href="lib/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="lib/css/fonts.css" />
+		<link rel="stylesheet" href="lib/css/font-awesome.min.css" />
+		
+		<!-- assets -->
+		<link rel="stylesheet" href="assets/css/structure.css" />
+		<link rel="stylesheet" href="assets/css/typography.css" />
+		<link rel="stylesheet" href="assets/css/menu.css" />
+		<link rel="stylesheet" href="assets/css/modals.css" />
+		<link rel="stylesheet" href="assets/css/buttons.css" />
+	</head>
+	<body>
+		<menu id="menu">
+		</menu>
+		
+		<main id="main">
+			<div id="message-container"></div>
+			<header id="header">
+				<h1>Page_Title</h1>
+				<div class="pull-right" id="header-button-container">
+					<button class="btn btn-primary btn-lg"><i class="fa fa-check fa-lg"></i></button>
+					<button class="btn btn-success btn-lg"><i class="fa fa-edit fa-lg"></i></button>
+					<button class="btn btn-warning btn-lg"><i class="fa fa-times fa-lg"></i></button>
+				</div>
+			</header>
+			<content id="content">
+				<div id="page-options">
+					<div class="pull-left" id="page-options-left">
+						<a><i class="fa fa-arrow-left"></i> voltar</a> |
+						<a><i class="fa fa-plus"></i> adicionar</a> |
+						<a><i class="fa fa-search"></i> pesquisar</a>
+					</div>
+					<div class="pull-right" id="page-options-right">
+						<a>avançar <i class="fa fa-arrow-right"></i></a>
+					</div>
+				</div>
+				<div id="content-inner">
+					<div class="col-sm-12">
+						<button class="btn btn-lg btn-warning" onclick="yesNoMaybeModal();" >Modal</button>
+						<button class="btn btn-lg btn-warning" onclick="testMessage();" >Mensagem</button>
+					</div>
+					<div class="clearfix">
+					
+					<h1>Actual Titling for the Page</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
+					<h2>Title for content</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
+					<h3>Subtitle for content</h3>
+					<p class="official">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
+					
+					<hr />
+					<p>Smaller versions:</p>
+					<hr />
+					
+					<h4>Actual Titling for the Page</h4>
+					<p class="small">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
+					<h5>Title for content</h5>
+					<p class="small">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
+					<h6>Subtitle for content</h6>
+					<p class="small official">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
+					
+					<hr />
+					<p>Ways to pass feelings:</p>
+					<hr />
+					
+					<code>.coloquial</code>
+					<p class="coloquial">This is a coloquial text. See how it seems like i'm speaking to you?</p>
+					
+					<code>.official</code>
+					<p class="official">There has been an error when you cloned the registry, please verify to that.</p>
+					
+					<code>.spelled</code>
+					<p class="spelled">can you understand?</p>
+					
+					<code>.yelling</code>
+					<p class="yelling">Get to it now!</p>
+					
+					<code>.carved</code>
+					<p class="carved">This text was written by carving into the html.</p>
+					<p class="carved coloquial">This text was written by carving into the html.</p>
+					<p class="carved official">This text was written by carving into the html.</p>
+					
+					<code>.outlined</code>
+					<p class="outlined">Outline this text for me please</p>
+					
+					<code>.heavy-outlined</code>
+					<p class="heavy-outlined">Outline this text for me please</p>
+					
+					<code>.long-shadow</code>
+					<div class="long-shadow-container">
+						<p class="long-shadow">Long shadowed text! Use within a container.</p>
+					</div>
+				</div>
+			</content>
+		</main>
+		
+		<div id="modal-container" class="hidden"></div>
+		<div id="background-container">
+			<div id="background-inner"></div>
+		</div>
+		
+		<div id="script-container">
+			<!-- lib -->
+			<script src="lib/js/jquery.min.js" ></script>
+			<script src="lib/js/jquery-ui.min.js" ></script>
+			<script src="lib/js/bootstrap.min.js" ></script>
+			<script src="lib/js/angular.min.js" ></script>
+			<!-- assets -->
+			<script src="assets/js/functions.js" ></script>
+			<script src="assets/js/webaniversario-initialization.js" ></script>
+			<!-- asset modules -->
+			<script src="assets/js/menuzator.js" ></script>
+			<script src="assets/js/backgrounder.js" ></script>
+			<script src="assets/js/feedbackzator.js" ></script>
+			<script src="assets/js/formzator.js" ></script>
+		</div>
+	</body>
+</html>
