@@ -12,8 +12,10 @@ var currentPage = "Dashboard";
 wNiver.menuzator = {
 	/** Bits and stuff about the menu */
 	config : {
-		
+		menuToggleDelay:300, // also set via CSS --> assets/css/menu.css
 	},
+	
+	isMenuOpen : true,
 	
 	menuHierarchy : [
 		{
@@ -232,15 +234,77 @@ wNiver.menuzator = {
 	},
 
 	processMenuHierarchy : function() {
+		if (typeof wNiver.structure.menu == "undefined" || wNiver.structure.menu.length == 0) { throw "Couldn't find menu object"; }
+		
 		var menuItemContainer = $("<ul></ul>").addClass("menu");
 		for (i=0; i<this.menuHierarchy.length; i++) {
 			wNiver.menuzator.createMenuItem(this.menuHierarchy[i], menuItemContainer);
 		}
-		menuItemContainer.appendTo("#menu");
+		menuItemContainer.appendTo(wNiver.structure.menu);
+		
+		if (wNiver.attributes.width < 768) {
+			setTimeout(function() { wNiver.menuzator.toggleMenu(); },300);
+		}
+	},
+	
+	toggleMenu : function() {
+		if ($(this).hasClass('draggable-prevent-click')) {
+			$(this).removeClass('draggable-prevent-click');
+			return;
+		}
+		
+		verbose("Toggling menu to " + (wNiver.menuzator.isMenuOpen ? "Closed" : "Open") );
+		
+		//$(document.body).addClass("menu-closing");
+		if (wNiver.menuzator.isMenuOpen == true) {
+			wNiver.structure.menuToggle.toggle("slide");
+			wNiver.structure.menu.find("ul.menu").toggle("slide");
+		} else {
+			wNiver.structure.menuToggle.toggle("slide");
+			wNiver.structure.menu.find("ul.menu").toggle("slide");
+		}
+		
+		setTimeout(function() {
+			if (typeof wNiver.structure.menuToggle == "undefined" || wNiver.structure.menuToggle.length == 0) { throw "Couldn't find menu toggle object"; }
+			//$(document.body).removeClass("menu-closing");
+			
+			if (wNiver.menuzator.isMenuOpen == true) {
+				wNiver.menuzator.isMenuOpen = false;
+				$(document.body).addClass("menu-closed");
+			} else {
+				wNiver.menuzator.isMenuOpen = true;
+				$(document.body).removeClass("menu-closed");
+			}
+			verbose("Menu is "+(!wNiver.menuzator.isMenuOpen ? "Closed" : "Open"))
+		},wNiver.menuzator.config.menuToggleDelay);
 	},
 	
 	initialize:function() {
 		this.processMenuHierarchy();
+		
+		if (typeof wNiver.structure.menuToggle != "undefined" && wNiver.structure.menuToggle.length > 0) {
+			wNiver.structure.menuToggle.on("click", this.toggleMenu);
+			
+			var menuInsideToggle = $("<div id='menu-inside-toggle'></div>");
+			var menuInsideToggleInner = $("<div class='menu-toggle-inner'><i class='fa fa-angle-double-left fa-lg'></i>").appendTo(menuInsideToggle);
+			menuInsideToggleInner.on("click",this.toggleMenu);
+			menuInsideToggle.insertBefore("ul.menu");
+			verbose("Inserted menu inside toggle", menuInsideToggle)
+			
+			$( wNiver.structure.menuToggle ).draggable({
+				containment: "body",
+				axis : "y", 
+				start: function(event, ui) {
+					//ui.helper.bind("click.prevent",
+						//function(event) { event.preventDefault(); });
+					$(this).addClass('draggable-prevent-click');
+				},
+				stop: function(event, ui) {
+					//setTimeout(function(){ui.helper.unbind("click.prevent");}, 300);
+				}
+			});
+		}
+		
 	}
 	
 }

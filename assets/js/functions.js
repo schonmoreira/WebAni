@@ -360,6 +360,14 @@ function zeroFill(number,length) {
     return "0".repeat(length-len < 0 ? 0 : (length-len)) + number;
 }
 
+
+function preventEventPropagation(evt) {
+	evt.preventDefault();
+	evt.stopPropagation();
+	return false;
+}
+
+utils.preventEventPropagation = preventEventPropagation;
 utils.zeroFill = zeroFill;
 utils.extenseNumber = extenseNumber;
 utils.jsAngle = jsAngle;

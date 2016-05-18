@@ -107,7 +107,7 @@ wNiver.feedBackZator = {
 		
 		var modalContainerObj = $("<div class='modal fade in' role='dialog' style='display:block;' id='" + modalId + "'></div>");
 			var modalDialogObj = $("<div class='modal-dialog'></div>").appendTo(modalContainerObj);
-			modalDialogObj.on("click", preventModal);
+			modalDialogObj.on("click", preventEventPropagation);
 				var modalContentObj = $("<div class='modal-content'></div>").appendTo(modalDialogObj);
 					var modalHeaderObj = $("<div class='modal-header'></div>").appendTo(modalContentObj);
 						var modalCloseBtn = $('<button type="button" class="close" data-dismiss="modal">&times;</button>').on("click", killModal);
@@ -146,13 +146,9 @@ wNiver.feedBackZator = {
 function killModal(evt) {
 	wNiver.feedBackZator.config.modalContainerObj.find(".modal").remove();
 	wNiver.feedBackZator.config.modalContainerObj.addClass("hidden");
-	return preventModal(evt)
+	return preventEventPropagation(evt)
 }
-function preventModal(evt) {
-	evt.preventDefault();
-	evt.stopPropagation();
-	return false;
-}
+	
 
 function yesNoMaybeModal() {
 	wNiver.feedBackZator.displayModal("Sim, não ou talvez?","Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",

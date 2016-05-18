@@ -4,7 +4,7 @@
  * By Arthur Annibal - WebAniversario
  * Version 0.0.0
  */
- 
+
 ul.menu {
 	padding:0;
 	padding-bottom:15px;
@@ -33,6 +33,12 @@ ul.menu {
 .menu-link .fa {
 	font-size:3.5em;
 	line-height:1.6em;
+	
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%)translateX(-50%);
+    display: block;
 }
 .menu-link:hover {
 	background:#444;
@@ -148,10 +154,80 @@ ul.menu ul.submenu {
 .submenu-container:hover + .submenu-container { z-index:9; }
 
 
+#menu-toggle {
+	animation:none;
+	opacity:.4;
+	display:none;
+	position:fixed;
+	z-index:11;
+	width:10%;
+	transition:opacity 300ms ease, transform 300ms ease;
+}
+#menu-toggle:hover {
+	opacity:1;
+}
+.menu-toggle-inner {
+	background:white;
+	position:relative;
+	padding:0 5px;
+	border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+	text-align:center;
+	cursor:pointer;
+}
+#menu-inside-toggle .menu-toggle-inner {
+    padding: 0px 20px;
+    background: none;
+    font-size: 1.5em;
+    padding-top: 10px;
+    color: goldenrod;
+}
+.menu-toggle-inner:active , .menu-toggle-inner:focus, .menu-toggle-inner:hover {
+	background:white;
+	color:black;
+}
+.menu-toggle-inner .fa {
+	position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+    display: block;
+}
 
+
+body.menu-closed #menu-toggle {
+	display:block;
+	animation:fadeOutSlope 3s linear 0s 1 normal forwards running;
+}
+body.menu-closed menu {
+	display:none;
+}
+
+
+body.no-menu #menu-toggle,
+body.menu-closed.no-menu #menu-toggle {
+	display:none;
+}
+
+@keyframes fadeOutSlope {
+	0% { opacity:1; }
+	80% { opacity:1; }
+	100% { opacity:.3; }
+}
+
+
+@media (max-width:1200px) {
+}
 @media (max-width:768px) {
+	
+	#menu-toggle {
+		opacity:.8;
+	}
+	#menu-toggle {
+		width:20%;
+	}
 	.menu-link .fa {
-		font-size: 5em;
+		font-size: 4em;
 		line-height: 1.6em;
 	}
 	ul.submenu ul.submenu {
@@ -166,7 +242,7 @@ ul.menu ul.submenu {
 }
 @media (max-width:640px) {
 	.menu-link .fa {
-		font-size: 4.8em;
+		font-size: 3.5em;
 		line-height: 1.3em;
 	}
 }

@@ -45,9 +45,11 @@ for (i in structure) {
 	}
 }
 
+structure.menuToggle = jQuery("#menu-toggle");
 wNiver.structure = structure;
 delete structure;
 if (isCheckOK) { verbose("Checking structure reference . . . ok");} else {verbose("Checking structure reference . . . failed");}
+
 
 
 verbose("Initialization complete.")

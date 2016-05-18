@@ -18,9 +18,14 @@
 		<link rel="stylesheet" href="assets/css/modals.css" />
 		<link rel="stylesheet" href="assets/css/buttons.css" />
 	</head>
-	<body>
+	<body class="">
 		<menu id="menu">
 		</menu>
+		<div id="menu-toggle" >
+			<div class="menu-link menu-toggle-inner">
+				<i class="fa fa-bars fa-lg"></i>
+			</div>
+		</div>
 		
 		<main id="main">
 			<div id="message-container"></div>
@@ -44,11 +49,131 @@
 					</div>
 				</div>
 				<div id="content-inner">
-					<div class="col-sm-12">
+					<div class="content-section">
 						<button class="btn btn-lg btn-warning" onclick="yesNoMaybeModal();" >Modal</button>
 						<button class="btn btn-lg btn-warning" onclick="testMessage();" >Mensagem</button>
+					</div>	
+					
+					
+					<div class="content-section highlight-block">
+						<h1>Highlight Block</h1>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
 					</div>
-					<div class="clearfix">
+					<div class="content-section highlight-block highlight-inverted">
+						<h1>Highlight Inverted Block</h1>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
+					</div>
+					
+					<div class="content-section highlighter-block">
+						<h1>Highlighter Block</h1>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
+					</div>
+					
+					<div class="content-section highlightest-block">
+						<h1>Highlightest Block</h1>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
+					</div>
+					
+					<div class="content-section highlight-block">
+						<div class="col-sm-3 box-container highlight-block highlight-inverted">
+							<div class="box-inner ">
+								<p>Box-container</p> <p class="indent-1">box-inner</p>
+							</div>
+						</div>
+						<div class="col-sm-2 col-sm-offset-1 box-container box-ratio-2-1 highlighter-block highlight-inverted">
+							<div class="box-inner ">
+								<p>Box-container box-ratio-2-1</p> <p class="indent-1">box-inner</p>
+							</div>
+						</div>
+						<div class="col-sm-5 ">
+							<div class="col-sm-12 col-sm-offset-1 box-container box-ratio-1-5 highlightest-block highlight-inverted long-shadow-container">
+								<div class="box-inner long-shadow ">
+									Square box relative to width - <strong>Ratio 1 to 5</strong>
+								</div>
+							</div>
+							<div class="clearfix large"></div>
+							<div class="col-sm-12 col-sm-offset-1 box-container box-ratio-1-3 outline-block long-shadow-container">
+								<div class="box-inner long-shadow long-shadow-white">
+									Also Long Shadow
+								</div>
+							</div>
+						</div>
+						
+						<div class="clearfix large"></div>
+						
+						<div class="col-sm-4 no-padding">
+							<div class="col-sm-12 box-container box-ratio-golden highlightest-block highlight-inverted">
+								<div class="box-inner">
+									<p>Box-container<br />box-ratio-golden</p> <p class="indent-1">box-inner</p>
+								</div>
+							</div>
+							<div class="clearfix"></div>
+							<div class="col-sm-6 col-sm-offset-0 box-container box-ratio-golden-vertical highlightest-block highlight-inverted">
+								<div class="box-inner">Golden Ratio</div>
+							</div>
+							<div class="col-sm-6 box-container box-ratio-golden-vertical highlight-block highlight-inverted">
+								<div class="box-inner">Golden Ratio</div>
+							</div>
+						</div>
+						<div class="col-sm-8 no-padding">
+							<div class="col-sm-5 box-container box-ratio-golden-vertical highlighter-block highlight-inverted">
+								<div class="box-inner">
+									<p>Box-container<br />box-ratio-golden-vertical</p> <p class="indent-1">box-inner</p>
+								</div>
+							</div>
+						</div>
+						
+						
+						<div class="clearfix large"></div>
+						
+						<div class="col-sm-12 box-container box-ratio-golden no-padding outline-block">
+							<div class="box-inner">
+								<div class="col-sm-5 box-container box-ratio-golden-vertical no-padding outline-block">
+									<div class="box-inner">
+										<div class="col-sm-12 box-container box-ratio-golden no-padding outline-block">
+											<div class="box-inner">
+												<div class="col-sm-5 box-container box-ratio-golden-vertical no-padding outline-block">
+													<div class="box-inner">
+										<div class="col-sm-12 box-container box-ratio-golden no-padding outline-block">
+											<div class="box-inner">
+												<div class="col-sm-5 box-container box-ratio-golden-vertical no-padding outline-block">
+													<div class="box-inner">
+										<div class="col-sm-12 box-container box-ratio-golden no-padding outline-block">
+											<div class="box-inner">
+												<div class="col-sm-5 box-container box-ratio-golden-vertical no-padding outline-block">
+													<div class="box-inner">
+										<div class="col-sm-12 box-container box-ratio-golden no-padding outline-block">
+											<div class="box-inner">
+												<div class="col-sm-5 box-container box-ratio-golden-vertical no-padding outline-block">
+													<div class="box-inner">
+														
+													</div>
+												</div>
+											</div>
+										</div>
+													</div>
+												</div>
+											</div>
+										</div>
+													</div>
+												</div>
+											</div>
+										</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-4"><div class="col-sm-12"><br />Playing around ;D</div></div>
+							</div>
+						</div>
+						
+					</div>
+					
+					<br />
+					<p class="small"><i class="fa fa-arrow-up"></i> oops..</p>
+					<br />
 					
 					<h1>Actual Titling for the Page</h1>
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
@@ -105,6 +230,7 @@
 		
 		<div id="modal-container" class="hidden"></div>
 		<div id="background-container">
+			<div id="background-overlay"></div>
 			<div id="background-inner"></div>
 		</div>
 		
