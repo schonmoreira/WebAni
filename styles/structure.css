@@ -22,7 +22,7 @@ menu,main,header,content, #message-container, #page-options, #content-inner, #mo
 	box-sizing:border-box;
 }
 
-header, content, menu {
+header, content {
 	background:rgba(240,240,240,0.85);
 }
 
@@ -30,6 +30,7 @@ menu,main {
 	min-height:250px;
 }
 menu {
+	background-color:rgba(255,204,64,1);
 	z-index:11;
 	padding:0;
 	margin:0;
@@ -108,6 +109,9 @@ content #content-inner {
 	width:100%;
 	position:absolute;
 	
+	background-color:rgba(255,204,64,1);
+	background-blend-mode: multiply;
+	
 	background-position:center center;
 	background-repeat:no-repeat;
 	background-size:cover;
@@ -120,11 +124,12 @@ content #content-inner {
 	width:100%;
 	position:absolute;
 	
+	background-color:rgba(255,204,64,.4);
 	background-position:0 0;
 	background-repeat:repeat;
 	background-size:12px 12px;
 	
-	background-image:url('../img/Line-Pattern_opacity9.png')
+	background-image:url('../images/Line-Pattern_opacity9.png')
 }
 .content-inner section, .content-section {
 	position:relative;

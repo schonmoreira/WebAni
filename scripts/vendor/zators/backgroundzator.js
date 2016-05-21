@@ -1,20 +1,20 @@
 /**
- * Backgrounder Script
+ * backgroundzator Script
  * Windows 10-like background image slideshow. Transition css-controlled
  * By Arthur Annibal - WebAniversario
- * Version 0.0.0
+ * Version 0.1.0
  */
  
 if (typeof wNiver == "undefined") {throw "WebAniversario 'wNiver' Object was not found"}
 
-wNiver.backgrounder = {
+wNiver.backgroundzator = {
 	/** Configuration for the slideshow */
 	config : {
 		/** Array of strings containing only the filenames and extension. jpg recommended. */
 		slides : ["bg-festa-(1).jpg", "bg-festa-(2).jpg", "bg-festa-(3).jpg", "bg-festa-(4).jpg"],
 		
 		/** FilePath to the images. "path + slide[i]" so include backslashes. */
-		path : "assets/img/backgrounds/",
+		path : "images/backgrounds/",
 		
 		/** Time in millisseconds to display each slide */
 		slideTime : 2800,
@@ -36,7 +36,7 @@ wNiver.backgrounder = {
 	
 	/** Selects a new background, takes care of the sequence and changes the background */
 	changeBackgrounds : function() {
-		var me = wNiver.backgrounder;
+		var me = wNiver.backgroundzator;
 		
 		verbose ("Changing backgrounds: current: "+me.config.path+me.slideSequence[me.currentSlideIndex]);
 		me.currentSlideIndex++;
@@ -59,7 +59,7 @@ wNiver.backgrounder = {
 	changeBackgroundsID : 0,
 	
 	initialize : function() {
-		verbose("Initializing backgrounder slideshow")
+		verbose("Initializing backgroundzator slideshow")
 		if (this.config.random) {
 			this.slideSequence = shuffleArray(this.config.slides);
 			// twice because i dont trust

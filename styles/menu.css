@@ -25,10 +25,10 @@ ul.menu {
 .menu-link {
 	position:  absolute;
 	top: 0; left: 0; bottom: 0; right: 0;
-	background:rgba(255,255,255,0.9);
+	background-color:rgba(255,204,64,1);
 	border-radius:5px;
 	text-align:center;
-	color:goldenrod;
+	color:white;
 }
 .menu-link .fa {
 	font-size:3.5em;
@@ -41,8 +41,9 @@ ul.menu {
     display: block;
 }
 .menu-link:hover {
-	background:#444;
-	color:white;
+	background:white;
+	
+	color:rgba(255,204,64,1);
 }
 .menu-link:active {
 	
